@@ -1,1 +1,23 @@
-<p>nav-bar works!</p>
+<div class="menu-opacity" [ngClass]="{ 'menu-opacity--active': navBarService.opacity}"></div>
+<nav class="lateral"
+    [ngClass]="{ 'lateral--active': navBarService.navBarIsActive, 'lateral--desactivate': !navBarService.navBarIsActive, 'lateral--show': navBarService.navBarIsActive}">
+    <ul class="lateral__menu">
+        <li class="lateral__item">
+            <a class="lateral__link" (click)="scrollTo('home'); setHomeLink(); offNavMenu(); offOpacity()"
+                [ngClass]="getActiveLink === 0 ? 'lateral__link--active': 'lateral__link--inactive'">Inicio</a>
+        </li>
+        <li class="lateral__item">
+            <a class="lateral__link" (click)="scrollTo('about'); offNavMenu(); offOpacity();setAboutLink()"
+                [ngClass]="getActiveLink === 1 ? 'lateral__link--active': 'lateral__link--inactive'">About</a>
+        </li>
+        <li class="menu__item">
+            <a class="lateral__link" (click)="setServiceLink(); scrollTo('services'); offNavMenu(); offOpacity()"
+                [ngClass]="getActiveLink === 2 ? 'lateral__link--active': 'lateral__link--inactive'">Services</a>
+        </li>
+        <li class="lateral__item">
+            <a class="lateral__link" (click)="scrollTo('proyects'); setPoyectLink(); offNavMenu(); offOpacity()"
+                [ngClass]="getActiveLink === 3 ? 'lateral__link--active': 'lateral__link--inactive'">Proyects</a>
+        </li>
+    </ul>
+    <img src="../assets/icons/x.svg" alt="X" class="lateral__x" (click)="offNavMenu(); offOpacity()">
+</nav>

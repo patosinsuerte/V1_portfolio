@@ -1,1 +1,28 @@
-<p>header works!</p>
+<header class="header">
+    <div class="header__icon">
+        <!-- <img src="./assets/images/header-image.jpg" alt="Icon" class="header__icon-image"> -->
+    </div>
+    <nav class="nav">
+        <ul class="menu">
+            <li class="menu__item">
+                <a class="menu__link" (click)="scrollTo('home'); setHomeLink(); scrollToTop()"
+                    [ngClass]="getActiveLink === 0 ? 'menu__link--active': 'menu__link--inactive'">Home</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" (click)="scrollTo('about'); setAboutLink()"
+                    [ngClass]="getActiveLink === 1 ? 'menu__link--active': 'menu__link--inactive'">About</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" (click)="scrollTo('services'); setServiceLink()"
+                    [ngClass]="getActiveLink === 2 ? 'menu__link--active': 'menu__link--inactive'">Services</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" (click)="scrollTo('proyects'); setProyectLink()"
+                    [ngClass]="getActiveLink === 3 ? 'menu__link--active': 'menu__link--inactive'">Proyects</a>
+            </li>
+        </ul>
+    </nav>
+    <img src="../assets/icons/menu.svg" alt="menu" class="header__hamburguer"
+        (click)="toggleNavBar() ; toggleOpacity()">
+</header>
+<shared-nav-bar class="navbar"></shared-nav-bar>

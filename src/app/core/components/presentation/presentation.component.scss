@@ -1,0 +1,214 @@
+.box {
+    height: auto;
+    min-height: 800px;
+    max-width: 100%;
+    padding: 1em;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/**IAM*/
+.information {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.information-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2em;
+}
+
+.information-about {
+    border-radius: 15px;
+    text-align: center;
+    padding: 1em;
+    padding-top: 4em;
+    width: 50%;
+    width: 300px;
+}
+.information-about-title {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding-bottom: 0.2em;
+    border-bottom: var(--secondary-color) solid 0.3px;
+}
+
+.information__text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1em;
+    max-width: 600px;
+}
+
+/**INFORMATION TITLES*/
+.information__titles {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 1em;
+}
+
+.information__title {
+    font-size: 2rem;
+    color: var(--font-primary-color);
+    text-align: left;
+}
+
+.information__title--orange {
+    color: #bd2805;
+    color: var(--secondary-color);
+}
+
+.information__subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--font-primary-color);
+    text-align: left;
+}
+
+/**INFORMATION DESCRIPTION*/
+.information__description {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.information__description-text {
+    color: var(--font-secondary-color-test);
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/**INFORMATION IMAGES*/
+
+.information__images {
+    display: flex;
+    justify-content: center;
+}
+.information__image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+/**TABLET INFORMATION*/
+@media screen and (min-width: 900px) {
+    .box {
+        background-attachment: fixed;
+    }
+
+    .information {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /**CONTENEDOR PARTE DOS*/
+
+    .information-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .information__text {
+        max-width: 600px;
+    }
+
+    .information__images {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        // border: solid #fff 2px;
+    }
+
+    .information__image {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+
+    /**INFORMATION TITLES*/
+    .information__titles {
+        background-color: rgba(32, 32, 32, 0.5);
+        background-color: transparent;
+    }
+
+    /**INFORMATION DESCRIPTION*/
+    .information__description {
+        background-color: rgba(32, 32, 32, 0.5);
+        background-color: transparent;
+    }
+}
+
+/**DESKTOP INFORMATION*/
+@media screen and (min-width: 1200px) {
+    .information {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 3em;
+        padding: 2em;
+    }
+
+    /**CONTENEDOR PARTE DOS*/
+
+    .information-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        gap: 1em;
+    }
+
+    .information__text {
+        max-width: 700px;
+        text-align: left;
+    }
+
+    .information__images {
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        // border: solid #fff 2px;
+    }
+
+    .information__image {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+
+    /**INFORMATION DESCRIPTION*/
+    .information__description {
+        color: var(--font-primary-color);
+        background-color: transparent;
+        border-radius: 10px;
+        padding: 1em;
+    }
+
+    .information-about {
+        max-width: 500px;
+        background-color: rgba(32, 32, 32, 0.8);
+        background-color: transparent;
+        border-radius: 20px;
+    }
+
+    .information__titles {
+        background-color: transparent;
+    }
+}
