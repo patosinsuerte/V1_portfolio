@@ -3,7 +3,6 @@
     min-height: 800px;
     max-width: 100%;
     background-image: url("/assets/images/services.png");
-    // background-image: url("/assets/images/wall2.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -53,13 +52,20 @@
     gap: 2em;
     border: solid #fff 2px;
     padding: 1em;
-    max-width: 500px;
-    // height: 380px;
-    height: auto;
+    min-width: 300px;
+    max-width: 400px;
+    height: 400px;
+
+    @media screen and (min-width: 700px) {
+        max-width: 400px;
+    }
 
     @media screen and (min-width: 1000px) {
+        max-width: 350px;
+    }
+
+    @media screen and (min-width: 1200px) {
         max-width: 400px;
-        height: 380px;
     }
 }
 
